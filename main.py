@@ -482,4 +482,5 @@ if __name__ == "__main__":
         dp.startup.register(on_startup)
         dp.run_polling(bot)
     except KeyboardInterrupt:
+
         print("Exiting...")
