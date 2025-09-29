@@ -7,6 +7,7 @@ BOT_TOKEN = "8150043265:AAF7O4-6EYR8-ciiRvtQHktQujEPwQaZCYA"
 ADMIN_ID = 6958805951
 GROUP_ID = -1002640997198
 OWNER_LINK = "Https://t.me/msmahidtech"
+CHANNEL_LINK = "https://t.me/AllOtpReceiver"
 
 
 # ==========================================================
