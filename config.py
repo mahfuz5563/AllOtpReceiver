@@ -15,7 +15,7 @@ CHANNEL_LINK = "https://t.me/AllOtpReceiver"
 # ==========================================================
 LOGIN_URL = "https://www.ivasms.com/login"
 LOGIN_EMAIL = "msgemssp@gmail.com"
-LOGIN_PASSWORD = "mahfuz@890"
+LOGIN_PASSWORD = "mahfuz63@63"
 
 # IVASMS endpoints
 BASE = "https://www.ivasms.com"
