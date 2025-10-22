@@ -3,7 +3,7 @@
 # --- Edit these values before running ---
 
 # Telegram Bot settings
-BOT_TOKEN = "8150043265:AAF7O4-6EYR8-ciiRvtQHktQujEPwQaZCYA"
+BOT_TOKEN = "8150043265:AAG1_5sWNuRPfjBqg8i328XhSLTi3olt19c"
 ADMIN_ID = 6958805951
 GROUP_ID = -1002640997198
 OWNER_LINK = "Https://t.me/msmahidtech"
