@@ -13,7 +13,7 @@ OWNER_LINK = "Https://t.me/msmahidtech"
 # ==========================================================
 LOGIN_URL = "https://www.ivasms.com/login"
 LOGIN_EMAIL = "msgemssp@gmail.com"
-LOGIN_PASSWORD = "msmahfuz@90"
+LOGIN_PASSWORD = "ms"
 
 # IVASMS endpoints
 BASE = "https://www.ivasms.com"
