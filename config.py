@@ -26,7 +26,7 @@ GET_OTP_URL = f"{BASE}/portal/sms/received/getsms/number/sms"
 # ==========================================================
 # Session and CSRF token (leave these as they are)
 # ==========================================================
-SESSION_COOKIE = "cMO1aDDD-3O5d1tF7ITbwfr8"
+SESSION_COOKIE = "cf_clearance=MLLiyNNk5fHnw.UKvMmqbtuYV3UY0xP7vSE0iHIxgSs-1761192118-1.2.1.1-os5cyMog9.psjE_LFpzav9X4ptlWEwvg.eX1F8qOrGN4chh61Bq9BNvXnCt9kWlEpQ77yQCu2X0uM34XuzLwCeQsHhdbtSxY.0nAHAJjxwmeE55jtIjHrx2zWGpVD27LOfrhZdwStANsyUTl79RXKfptKFPb9GaW62FcZjGZoCKkW34h2Sw0EhCeVVIAWUvsgxPSxNFoXfrNOq3akMPmVgEzr4Y_CovoShlIU4D22Ic; XSRF-TOKEN=eyJpdiI6IlNpMzRHMVZWcEsrRTAySVJST1hOY3c9PSIsInZhbHVlIjoieGMzMHJ6QzZZclFwdStTbldBaDdhcitQMHJ1S0RQKzEyWUJPWGxBRnpBNjVJa1h2QUtuYStnYWJtRmtHbk43d1NWUUhzczdPZERlbCtMMlRhUkhZeUZvUjBKcEYySzREb3Vneit1V0VLZ0ZMSGZPbnZBdERvK2ZRYXhmOW1sWmciLCJtYWMiOiIzMjAyY2I5OGUxNDkzOTgzNDYzNWNmODZkMWNjYTVmZDJkM2MzZGUxMmY0ZWQ3MTNmZDM1MDI0ZTgwYTk5ODc0IiwidGFnIjoiIn0%3D; ivas_sms_session=eyJpdiI6IjFxcTVJZXlxZStBL0hXb2ZzMnlxZEE9PSIsInZhbHVlIjoiRCtVbk5VUW5Lc3h4eEdXb215R2dneHdOUTRCTGpZRnlFNS9UMVlqR2VrSlh1NkkxYVRQSGl3Y1M1OHNWYjJFc0JMWWNCbVgzTzJ0SitKcDBnZmNMbFlKb3R4czRuSVdCRGFOMTNWL0VobnJyUGp1dk1SbEFENG1EOXE0eUN2RmkiLCJtYWMiOiI0OTA5NTAyZjRhNWM5NzVmYTViNDlkMjdhYTg1YTc2YzgxNmJiODA2Y2E5NjBjMjE2MzQxMGM2NDUyNjc5Y2FmIiwidGFnIjoiIn0%3D; _fbp=fb.1.1761192130154.223012430810351080"
 CSRF_TOKEN = "4Wt8YmDtZzlTjI151IDM0LGqtPIwlF8z3VsYthpQ"
 
 # Request headers (don't change unless necessary)
