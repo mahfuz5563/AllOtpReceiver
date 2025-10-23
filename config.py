@@ -26,8 +26,8 @@ GET_OTP_URL = f"{BASE}/portal/sms/received/getsms/number/sms"
 # ==========================================================
 # Session and CSRF token (leave these as they are)
 # ==========================================================
-SESSION_COOKIE = ""
-CSRF_TOKEN = ""
+SESSION_COOKIE = "cMO1aDDD-3O5d1tF7ITbwfr8"
+CSRF_TOKEN = "4Wt8YmDtZzlTjI151IDM0LGqtPIwlF8z3VsYthpQ"
 
 # Request headers (don't change unless necessary)
 HEADERS = {
