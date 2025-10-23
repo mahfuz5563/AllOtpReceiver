@@ -1,4 +1,3 @@
-
 # config.py
 # --- Edit these values before running ---
 
@@ -7,7 +6,6 @@ BOT_TOKEN = "8150043265:AAG1_5sWNuRPfjBqg8i328XhSLTi3olt19c"
 ADMIN_ID = 6958805951
 GROUP_ID = -1002640997198
 OWNER_LINK = "Https://t.me/msmahidtech"
-CHANNEL_LINK = "https://t.me/AllOtpReceiver"
 
 
 # ==========================================================
@@ -15,7 +13,7 @@ CHANNEL_LINK = "https://t.me/AllOtpReceiver"
 # ==========================================================
 LOGIN_URL = "https://www.ivasms.com/login"
 LOGIN_EMAIL = "msgemssp@gmail.com"
-LOGIN_PASSWORD = "mahfuz63@63"
+LOGIN_PASSWORD = "msmahfuz@90"
 
 # IVASMS endpoints
 BASE = "https://www.ivasms.com"
@@ -26,8 +24,8 @@ GET_OTP_URL = f"{BASE}/portal/sms/received/getsms/number/sms"
 # ==========================================================
 # Session and CSRF token (leave these as they are)
 # ==========================================================
-SESSION_COOKIE = "cf_clearance=MLLiyNNk5fHnw.UKvMmqbtuYV3UY0xP7vSE0iHIxgSs-1761192118-1.2.1.1-os5cyMog9.psjE_LFpzav9X4ptlWEwvg.eX1F8qOrGN4chh61Bq9BNvXnCt9kWlEpQ77yQCu2X0uM34XuzLwCeQsHhdbtSxY.0nAHAJjxwmeE55jtIjHrx2zWGpVD27LOfrhZdwStANsyUTl79RXKfptKFPb9GaW62FcZjGZoCKkW34h2Sw0EhCeVVIAWUvsgxPSxNFoXfrNOq3akMPmVgEzr4Y_CovoShlIU4D22Ic; XSRF-TOKEN=eyJpdiI6IlNpMzRHMVZWcEsrRTAySVJST1hOY3c9PSIsInZhbHVlIjoieGMzMHJ6QzZZclFwdStTbldBaDdhcitQMHJ1S0RQKzEyWUJPWGxBRnpBNjVJa1h2QUtuYStnYWJtRmtHbk43d1NWUUhzczdPZERlbCtMMlRhUkhZeUZvUjBKcEYySzREb3Vneit1V0VLZ0ZMSGZPbnZBdERvK2ZRYXhmOW1sWmciLCJtYWMiOiIzMjAyY2I5OGUxNDkzOTgzNDYzNWNmODZkMWNjYTVmZDJkM2MzZGUxMmY0ZWQ3MTNmZDM1MDI0ZTgwYTk5ODc0IiwidGFnIjoiIn0%3D; ivas_sms_session=eyJpdiI6IjFxcTVJZXlxZStBL0hXb2ZzMnlxZEE9PSIsInZhbHVlIjoiRCtVbk5VUW5Lc3h4eEdXb215R2dneHdOUTRCTGpZRnlFNS9UMVlqR2VrSlh1NkkxYVRQSGl3Y1M1OHNWYjJFc0JMWWNCbVgzTzJ0SitKcDBnZmNMbFlKb3R4czRuSVdCRGFOMTNWL0VobnJyUGp1dk1SbEFENG1EOXE0eUN2RmkiLCJtYWMiOiI0OTA5NTAyZjRhNWM5NzVmYTViNDlkMjdhYTg1YTc2YzgxNmJiODA2Y2E5NjBjMjE2MzQxMGM2NDUyNjc5Y2FmIiwidGFnIjoiIn0%3D; _fbp=fb.1.1761192130154.223012430810351080"
-CSRF_TOKEN = "4Wt8YmDtZzlTjI151IDM0LGqtPIwlF8z3VsYthpQ"
+SESSION_COOKIE = ""
+CSRF_TOKEN = ""
 
 # Request headers (don't change unless necessary)
 HEADERS = {
