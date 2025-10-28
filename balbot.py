@@ -5,7 +5,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 
 # ======= CONFIG =======
-BOT_TOKEN = "8150043265:AAG1_5sWNuRPfjBqg8i328XhSLTi3olt19c"
+BOT_TOKEN = "7936769912:AAGGiApAc1NzpR7xJuEqEvazUPvqLvEtgxI"
 ADMIN_ID = 6958805951        # <-- Admin Telegram ID
 CHAT_ID = -1002640997198     # <-- Group / Chat ID
 DOWNLOAD_DIR = "downloads"
