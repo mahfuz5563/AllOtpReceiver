@@ -151,4 +151,4 @@ def main():
     # Start cookie expiry check thread
     threading.Thread(target=check_cookies_expiry, args=(app,), daemon=True).start()
 
-    print("[!] Bot
+    print("[!] Bot running...")
