@@ -15,9 +15,9 @@ os.makedirs(DOWNLOAD_DIR, exist_ok=True)
 # ---------- COOKIES ----------
 cookies = {
     '_fbp': 'fb.1.1761586044630.56315445379276238',
-    'cf_clearance': 'FDJvJ4TvXNTIb5ntM_64j4TC25.7r02VZePHm_.jiKU-1761624405-1.2.1.1-EO02TjfTRAvQTAOyM_a1eXuuTp_PSuUrHDdJ0o0nnuehhVyu_oMWoAOaFTH9UpliHjjIEuZS7ltcqrkSOj6Hz.ZFaZVQhyYZodvgmiw7lUta8T0b9ct5PewAmLgDbWVMGovPa7C30kw66dr7Ag40q5J5Y3z9usOUxnPgJPkvCeOBC_0XJENjX4qdJQrKhCDgw5pnViCeeyIMmSJhQuNklhtcxoKZsuZH1MQDeCDcX1g',
-    'XSRF-TOKEN': 'eyJpdiI6Ii93NWFUK3NNa2tZNiszdVp1eE45QXc9PSIsInZhbHVlIjoieTNQdHJYZGZFSVZXOGtZdmdxWHlZdGRjUW9ieitIVHJQT0FvWEpZeHN3dlBialh0citSdmttRld4WklvR1o2NmxqenFFVCsvbUMxcE9YVzNMS3R1cURTL3hvUVVGNHdsTUxzOXpKUVhHS21xV1dDVnZ3dUY3UDREMEZBZDRmQ2EiLCJtYWMiOiIwOGQzN2MyY2FhNGIzYzdiNmIxODlhZDE0NzlkMjM0MWFiODk2OTQzM2ExODQ5MGZhZjkzMjM3Y2ViMDg0OTZlIiwidGFnIjoiIn0%3D',
-    'ivas_sms_session': 'eyJpdiI6IjJhaTdDMkd5QmR1WkNpbzJKRjlEV1E9PSIsInZhbHVlIjoiTDU5SFZybXJWZDcva1ZldklYclpKZDl4TXpUZmNtNnYwZEIxOEkySDRWaE1DQ2hLWXd3MXgrR0paZ1BuMjlYL3N0WWdpWUY5TWw1TzdwbzZOaDBvQkFCL2NDZUp6d2F6M0FZZnJKekhhK3lHWDRVWkRsSjJVcGVnMzhQT1NSaFQiLCJtYWMiOiJlZTcwOWY2NmM5ZmVmODdmZWE3MWI2NDdmZjE3ZTgwYTU4NjViNGQzYTU5Zjg0NzYzZTkxZjg2ZmFmOGVjM2NkIiwidGFnIjoiIn0%3D',
+    'cf_clearance': 'YOUR_CF_CLEARANCE_HERE',
+    'XSRF-TOKEN': 'YOUR_XSRF_TOKEN_HERE',
+    'ivas_sms_session': 'YOUR_SESSION_HERE',
 }
 
 headers = {
@@ -85,7 +85,9 @@ def build_styled_otp_block(number, sid, otp, message, timestamp, signature="@Sab
 def monitor_sms(app):
     print("[+] IVA SMS Monitor Started...")
     last_sms_ids = set()
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
     while True:
         try:
             r = requests.get("https://www.ivasms.com/portal/live/my_sms", cookies=cookies, headers=headers)
@@ -97,6 +99,7 @@ def monitor_sms(app):
                 print("[!] Cookies expired, waiting for admin update...")
                 time.sleep(60)
                 continue
+
             data = r.json()
             for sms in data.get("sms_list", []):
                 sms_id = sms.get("id")
@@ -104,6 +107,7 @@ def monitor_sms(app):
                 message = sms.get("message", "")
                 otp = sms.get("otp", "N/A")
                 created_at = datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
+
                 if sms_id not in last_sms_ids:
                     last_sms_ids.add(sms_id)
                     msg_block = build_styled_otp_block(number, sms_id, otp, message, created_at)
@@ -111,6 +115,7 @@ def monitor_sms(app):
                         app.bot.send_message(chat_id=CHAT_ID, text=msg_block, parse_mode="HTML"),
                         loop
                     )
+
             time.sleep(5)
         except Exception as e:
             print(f"[x] Exception: {e}")
@@ -118,16 +123,15 @@ def monitor_sms(app):
 
 # ---------- COOKIE EXPIRY CHECK ----------
 def check_cookies_expiry(app):
-    loop = asyncio.get_event_loop()
+    loop = asyncio.new_event_loop()
+    asyncio.set_event_loop(loop)
+
     while True:
         try:
             r = requests.get("https://www.ivasms.com/portal/live/my_sms", cookies=cookies, headers=headers)
             if r.status_code in [401, 403] or "login" in r.text.lower():
                 asyncio.run_coroutine_threadsafe(
-                    app.bot.send_message(
-                        chat_id=ADMIN_ID,
-                        text="⚠️ IVA SMS cookies expired! Please update using /cookies {JSON}"
-                    ),
+                    app.bot.send_message(chat_id=ADMIN_ID, text="⚠️ IVA SMS cookies expired! Please update using /cookies {JSON}"),
                     loop
                 )
                 print("[!] Cookies expired, waiting for admin update...")
@@ -147,8 +151,4 @@ def main():
     # Start cookie expiry check thread
     threading.Thread(target=check_cookies_expiry, args=(app,), daemon=True).start()
 
-    print("[!] Bot running...")
-    app.run_polling()
-
-if __name__ == "__main__":
-    main()
+    print("[!] Bot
